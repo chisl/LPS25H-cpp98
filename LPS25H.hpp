@@ -54,7 +54,7 @@ public:
 		/* Bits REF_P: */
 		struct REF_P_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint32_t dflt = 0b000000000000000000000000; // 24'd0
 			static const uint32_t mask = 0b111111111111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
 		};
@@ -91,7 +91,7 @@ public:
 		/* Bits WHO_AM_I: */
 		struct WHO_AM_I_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t dflt = 0b10111101; // 8'b10111101
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
@@ -128,6 +128,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b11110000; // [4,5,6,7]
 		};
@@ -135,6 +136,7 @@ public:
 		/* select the pressure internal average.  */
 		struct AVGT
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b01; // 2'b1
 			static const uint8_t mask = 0b00001100; // [2,3]
 			static const uint8_t INTERNAL_AVG_8 = 0b00; // 8 Nr. internal average
@@ -146,6 +148,7 @@ public:
 		/* select the temperature internal average.  */
 		struct AVGP
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b01; // 2'b1
 			static const uint8_t mask = 0b00000011; // [0,1]
 			static const uint8_t INTERNAL_AVG_8 = 0b00; // 8 Nr. internal average
@@ -191,6 +194,7 @@ public:
 		 */
 		struct PD
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 			static const uint8_t POWER_DOWN_MODE = 0b0; // power-down mode
@@ -204,6 +208,7 @@ public:
 		 */
 		struct ODR
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b01110000; // [4,5,6]
 			static const uint8_t ONE_SHOT = 0b00; // Power down / One shot mode enabled
@@ -224,6 +229,7 @@ public:
 		 */
 		struct DIFF_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 			static const uint8_t DISABLE = 0b0; // interrupt generation disabled
@@ -242,6 +248,7 @@ public:
 		 */
 		struct BDU
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 			static const uint8_t CONTINUOUS_UPDATE = 0b0; // continuous update;
@@ -255,6 +262,7 @@ public:
 		 */
 		struct RESET_AZ
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 			static const uint8_t DISABLE = 0b0; // 
@@ -264,6 +272,7 @@ public:
 		/* SPI Serial Interface Mode selection.  */
 		struct SIM
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 			static const uint8_t SPI_4_WIRE = 0b0; // 4-wire interface
@@ -316,6 +325,7 @@ public:
 		 */
 		struct BOOT
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 			static const uint8_t NORMAL_MODE = 0b0; // normal mode
@@ -325,6 +335,7 @@ public:
 		/* FIFO enable.  */
 		struct FIFO_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
 			static const uint8_t DISABLE = 0b0; // 
@@ -334,6 +345,7 @@ public:
 		/* Enable FIFO Watermark level use.  */
 		struct WTM_EN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00100000; // [5]
 			static const uint8_t DISABLE = 0b0; // 
@@ -346,6 +358,7 @@ public:
 		 */
 		struct FIFO_MEAN_DEC
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00010000; // [4]
 			static const uint8_t DISABLE = 0b0; // 
@@ -354,6 +367,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 		};
@@ -365,6 +379,7 @@ public:
 		 */
 		struct SWRESET
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 			static const uint8_t NORMAL_MODE = 0b0; // 
@@ -380,6 +395,7 @@ public:
 		 */
 		struct AUTOZERO
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 			static const uint8_t NORMAL_MODE = 0b0; // 
@@ -395,6 +411,7 @@ public:
 		 */
 		struct ONE_SHOT
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 			static const uint8_t WAITING = 0b0; // waiting for start of conversion
@@ -441,6 +458,7 @@ public:
 		/* Interrupt active-high/low.  */
 		struct INT_H_L
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 			static const uint8_t ACTIVE_HIGH = 0b0; // active high
@@ -450,6 +468,7 @@ public:
 		/* Push-pull/open drain selection on interrupt pads.  */
 		struct PP_OD
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
 			static const uint8_t PUSH_PULL = 0b0; // push-pull
@@ -458,6 +477,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b00111100; // [2,3,4,5]
 		};
@@ -465,6 +485,7 @@ public:
 		/* Data signal on INT1 pad control bits.  */
 		struct INT_S
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b00000011; // [0,1]
 			static const uint8_t DATA_SIGNAL = 0b00; // Data signal (see CTRL_REG4)
@@ -505,6 +526,7 @@ public:
 		/* keep these bits at 0  */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0000; // 4'b0
 			static const uint8_t mask = 0b11110000; // [4,5,6,7]
 		};
@@ -512,6 +534,7 @@ public:
 		/* Empty signal on INT1 pin.  */
 		struct P1_EMPTY
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00001000; // [3]
 			static const uint8_t DISABLE = 0b0; // 
@@ -521,6 +544,7 @@ public:
 		/* Watermark signal on INT1 pin.  */
 		struct P1_WTM
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 			static const uint8_t DISABLE = 0b0; // 
@@ -530,6 +554,7 @@ public:
 		/* Overrun signal on INT1 pin.  */
 		struct P1_OVERRUN
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 			static const uint8_t DISABLE = 0b0; // 
@@ -539,6 +564,7 @@ public:
 		/* Dataready signal on INT1 pin.  */
 		struct P1_DRDY
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 			static const uint8_t DISABLE = 0b0; // 
@@ -577,6 +603,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b11111000; // [3,4,5,6,7]
 		};
@@ -584,6 +611,7 @@ public:
 		/* Latch interrupt request into INT_SOURCE register.  */
 		struct LIR
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 			static const uint8_t NOT_LATCHED = 0b0; // interrupt request not latched
@@ -593,6 +621,7 @@ public:
 		/* Enable interrupt generation on differential pressure low event.  */
 		struct PLE
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 			static const uint8_t DISABLE = 0b0; // disable interrupt request 
@@ -602,6 +631,7 @@ public:
 		/* Enable interrupt generation on differential pressure high event.  */
 		struct PHE
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 			static const uint8_t DISABLE = 0b0; // disable interrupt request
@@ -642,6 +672,7 @@ public:
 		/* keep these bits at 0.  */
 		struct reserved_0
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000; // 5'd0
 			static const uint8_t mask = 0b11111000; // [3,4,5,6,7]
 		};
@@ -649,6 +680,7 @@ public:
 		/* Interrupt active.  */
 		struct IA
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000100; // [2]
 			static const uint8_t NO_INTERRUPT = 0b0; // no interrupt has been generated;
@@ -658,6 +690,7 @@ public:
 		/* Differential pressure Low.  */
 		struct PL
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 			static const uint8_t NO_INTERRUPT = 0b0; // no interrupt has been generated;
@@ -667,6 +700,7 @@ public:
 		/* Differential pressure High.  */
 		struct PH
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 			static const uint8_t NO_INTERRUPT = 0b0; // no interrupt has been generated;
@@ -706,6 +740,7 @@ public:
 		/* Bits reserved_0: */
 		struct reserved_0
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b11000000; // [6,7]
 		};
@@ -718,6 +753,7 @@ public:
 		 */
 		struct P_OR
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00100000; // [5]
 			static const uint8_t NO_OVERRUN = 0b0; // no overrun has occurred;
@@ -731,6 +767,7 @@ public:
 		 */
 		struct T_OR
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00010000; // [4]
 			static const uint8_t NO_OVERRUN = 0b0; // no overrun has occurred;
@@ -739,6 +776,7 @@ public:
 		/* Bits unused_1: */
 		struct unused_1
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00; // 2'b0
 			static const uint8_t mask = 0b00001100; // [2,3]
 		};
@@ -750,6 +788,7 @@ public:
 		 */
 		struct P_DA
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000010; // [1]
 			static const uint8_t NO_NEW_DATA = 0b0; // new data for pressure is not yet available;
@@ -763,6 +802,7 @@ public:
 		 */
 		struct T_DA
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00000001; // [0]
 			static const uint8_t NO_NEW_DATA = 0b0; // new data for temperature is not yet available
@@ -809,7 +849,7 @@ public:
 		/* Bits PRESS_OUT: */
 		struct PRESS_OUT_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint32_t mask = 0b111111111111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
 		};
 	};
@@ -850,7 +890,7 @@ public:
 		/* Bits TEMP_OUT: */
 		struct TEMP_OUT_
 		{
-			/* Mode:r */
+			/* MODE r */
 			static const uint8_t mask = 0b11111111; // [0,1,2,3,4,5,6,7]
 		};
 	};
@@ -895,6 +935,7 @@ public:
 		 */
 		struct F_MODE
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b000; // 3'b0
 			static const uint8_t mask = 0b11100000; // [5,6,7]
 			static const uint8_t BYPASS = 0b00; // Bypass mode
@@ -913,6 +954,7 @@ public:
 		 */
 		struct WTM_POINT
 		{
+			/* MODE rw */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 			static const uint8_t SAMPLE_2 = 0b001; // 2-sample moving average
@@ -955,6 +997,7 @@ public:
 		/* Watermark status.  */
 		struct WTM_FIFO
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b10000000; // [7]
 			static const uint8_t FIFO_BELOW = 0b0; // FIFO level lower than watermark level
@@ -964,6 +1007,7 @@ public:
 		/* Overrun bit status.  */
 		struct FULL_FIFO
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b01000000; // [6]
 			static const uint8_t FIFO_NOT_FULL = 0b0; // 
@@ -973,6 +1017,7 @@ public:
 		/* Empty FIFO bit.  */
 		struct EMPTY_FIFO
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b0; // 1'b0
 			static const uint8_t mask = 0b00100000; // [5]
 			static const uint8_t FIFO_NOT_EMPTY = 0b0; // 
@@ -982,6 +1027,7 @@ public:
 		/* FIFO stored data level.  */
 		struct DIFF_POINT
 		{
+			/* MODE r */
 			static const uint8_t dflt = 0b00000; // 5'b0
 			static const uint8_t mask = 0b00011111; // [0,1,2,3,4]
 		};
@@ -1021,6 +1067,7 @@ public:
 		/* Refer to Section 10.2: "THS_P_L (0Ch)"  */
 		struct THS
 		{
+			/* MODE rw */
 			static const uint16_t dflt = 0b0000000000000000; // 16'b0
 			static const uint16_t mask = 0b1111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 		};
@@ -1059,7 +1106,7 @@ public:
 		/* Bits RPDS: */
 		struct RPDS_
 		{
-			/* Mode:rw */
+			/* MODE rw */
 			static const uint16_t dflt = 0b0011100000000000; // 16'b11100000000000
 			static const uint16_t mask = 0b1111111111111111; // [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 		};
